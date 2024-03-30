@@ -17,7 +17,6 @@ public class Constants {
     public static final String CHECKBOXURL = "http://the-internet.herokuapp.com/checkboxes";
     public static final String TYPE = "type";
     public static final String CHECKBOX = "checkbox";
-
     public static final String DROPDOWNURL = "http://the-internet.herokuapp.com/dropdown";
     public static final String COLLECTIONSURL = "https://demoqa.com/text-box";
     public static final String FULLNAME = "Full Name";
@@ -25,5 +24,4 @@ public class Constants {
     public static final String CURRENTADDRESS = "Current Address";
     public static final String PERMANENTADDRESS = "Permanent Address";
     public static final String PLACEHOLDER = "placeholder";
-    String conflict = "Conflict";
 }
