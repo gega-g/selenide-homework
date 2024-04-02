@@ -214,6 +214,6 @@ public class SelenideTests2 {
         sfa.assertEquals(correctBooks.size(), 10);
         sfa.assertEquals(Constants.TITLETOEQUAL, bookTitles.get(0));
         sfa.assertAll();
-        System.out.println("ERRORERRORERROR");
+        System.out.println("FIXFIX");
     }
 }
