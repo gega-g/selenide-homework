@@ -24,4 +24,28 @@ public class Constants {
     public static final String CURRENTADDRESS = "Current Address";
     public static final String PERMANENTADDRESS = "Permanent Address";
     public static final String PLACEHOLDER = "placeholder";
-}
+    public static final String HREF = "href";
+    public static final String WEB = "#web";
+    public static final String CLASS = "class";
+    public static final String PURPLE = "HoverImg u-mb1";
+    public static final String HOVERERRORMESSAGE = "not every hover contains purple";
+    public static final String UICONDITION = "UI for Vue demos";
+    public static final String UIERROR = "No such UI element";
+    public static final String DESKTOP = "#desktop";
+    public static final String MICROSOFT = "Get It from Microsoft";
+    public static final String WITHMICROSOFT = " is in Microsoft Store";
+    public static final String MOBILE = "#mobile";
+    public static final String APPLE = "Download on the App Store";
+    public static final String XAMARINID = "ContentPlaceholder1_C340_Col01";
+    public static final String GOOGLE = "Get it on Google Play";
+    public static final String MICROSOFT2 = "Get it from Microsoft";
+    public static final String DEMOQAURL = "https://demoqa.com/books";
+    public static final String AFGHANISTAN = "Afghanistan";
+    public static final String BIEMAIL = "biEmail";
+    public static final String JS = "JavaScript";
+    public static final String ID = "id";
+    public static final String ONETRUST = "onetrust-accept-btn-handler";
+    public static final String MEDIA = "O'Reilly Media";
+    public static final String TITLETOEQUAL = "Learning JavaScript Design Patterns";
+    public static final String error = ("ERRORERRORERROR");;
+    }

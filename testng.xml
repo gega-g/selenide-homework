@@ -9,26 +9,32 @@
             <class name="SelenideTests">
                 <methods>
                     <include name="validateBundleOffers"/>
-<!--                    <include name="validateIndividualOffers"/>-->
-<!--                    <include name="checkBoxTest"/>-->
-<!--                    <include name="dropDownTest"/>-->
-<!--                    <include name="collectionsTest"/>-->
+                    <include name="validateIndividualOffers"/>
+                    <include name="checkBoxTest"/>
+                    <include name="dropDownTest"/>
+                    <include name="collectionsTest"/>
                 </methods>
             </class>
         </classes>
     </test>
 
-<!--    <test name="ChromeTest">-->
-<!--        <parameter name="browser" value="Chrome"/>-->
-<!--        <classes>-->
-<!--            <class name="SelenideTests">-->
-<!--                <methods>-->
-<!--                    <include name="validateBundleOffers"/>-->
-<!--                    <include name="validateIndividualOffers"/>-->
-<!--                    <include name="checkBoxTest"/>-->
-<!--                    <include name="dropDownTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="SelenideTests">
+                <methods>
+                    <include name="validateBundleOffers"/>
+                    <include name="validateIndividualOffers"/>
+                    <include name="checkBoxTest"/>
+                    <include name="dropDownTest"/>
+                </methods>
+            </class>
+            <class name="SelenideTests2">
+                <methods>
+                    <include name="validateDemosDesign"/>
+                    <include name="validateOrderMechanics"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
