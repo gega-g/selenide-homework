@@ -47,5 +47,6 @@ public class Constants {
     public static final String ONETRUST = "onetrust-accept-btn-handler";
     public static final String MEDIA = "O'Reilly Media";
     public static final String TITLETOEQUAL = "Learning JavaScript Design Patterns";
-    public static final String error = ("ERRORERRORERROR");;
+
+    public static final String fix = ("FIXFIXFIX");;
     }
