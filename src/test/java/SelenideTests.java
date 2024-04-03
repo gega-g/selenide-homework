@@ -56,7 +56,7 @@ public class SelenideTests {
 //        return null;
 //    }
 
-    public void navigateToPricing(){
+    public static void navigateToPricing(){
         open(Constants.TELERIKURL);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         SelenideElement pricing = $(withText(Constants.PRICING));
