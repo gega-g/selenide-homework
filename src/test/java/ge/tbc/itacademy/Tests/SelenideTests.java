@@ -1,8 +1,15 @@
+package ge.tbc.itacademy.Tests;
+
 import com.codeborne.selenide.*;
+import ge.tbc.itacademy.ReportListener.CustomReportListener;
+import ge.tbc.itacademy.SuiteListener.CustomSuiteListener;
+import ge.tbc.itacademy.TestListener.CustomTestListener;
 import ge.tbcitacademy.data.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -14,6 +21,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
+@Listeners({CustomReportListener.class, CustomTestListener.class, CustomSuiteListener.class})
 public class SelenideTests {
     @BeforeClass
     @Parameters(Constants.BROWSER)
@@ -25,36 +33,14 @@ public class SelenideTests {
             case Constants.FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 break;
+            case Constants.EDGE:
+                WebDriverManager.edgedriver().setup();
+                break;
             default:
                 throw new IllegalArgumentException(Constants.UNSUPPORTEDBROWSER + browser);
         }
     }
 
-//    public List<List<String>> getTableData() {
-//        List<List<String>> tableData = new ArrayList<>();
-//        SelenideElement table = $(".PricingTable-Wrap");
-//        ElementsCollection rows = table.findAll("tr");
-//        for (SelenideElement row : rows) {
-//            ElementsCollection columns = row.findAll("td");
-//            List<String> rowElements = new ArrayList<>();
-//            for (SelenideElement column : columns) {
-//                rowElements.add(column.getText());
-//            }
-//            tableData.add(rowElements);
-//        }
-//        return tableData;
-//    }
-//    public List<String> getRow(String feature) {
-//        List<List<String>> tableData = getTableData();
-//        for (List<String> row : tableData) {
-//            for (String element : row) {
-//                if (element.contains(feature)) {
-//                    return row;
-//                }
-//            }
-//        }
-//        return null;
-//    }
 
     public static void navigateToPricing(){
         open(Constants.TELERIKURL);
@@ -64,7 +50,8 @@ public class SelenideTests {
     }
 
 
-    @Test
+    @Test(description = Constants.BUNDLEOFFERSDESC)
+
     public void validateBundleOffers(){
         navigateToPricing();
         SelenideElement details = $x("//span[@class='action']");
@@ -74,8 +61,6 @@ public class SelenideTests {
         SelenideElement UI = $(".UI.is-active");
         UI.shouldNotHave(text(Constants.MOCKINGSOLUTION));
 
-//        ვერ მივხვდი როგორ უნდა გამეკეთებინა დანარჩენები:/
-
         ElementsCollection offerNames = $$(".Text--b9.u-fs24.u-tac.u-mb0.js-product");
         executeJavaScript("window.scrollTo(0, document.body.scrollHeight)");
         for (SelenideElement name : offerNames) {
@@ -84,7 +69,7 @@ public class SelenideTests {
     }
 
 
-    @Test
+    @Test(description = Constants.INDIVIDUALOFFERSDESC)
     public void validateIndividualOffers(){
         navigateToPricing();
         $(withText(Constants.INDIVIDUALPRODUCTS)).click();
@@ -103,7 +88,7 @@ public class SelenideTests {
 
     }
 
-    @Test
+    @Test(description = Constants.CHECKBOXDESC)
     public void checkBoxTest() {
         open(Constants.CHECKBOXURL);
         WebDriverRunner.getWebDriver().manage().window().maximize();
@@ -116,7 +101,7 @@ public class SelenideTests {
         checkbox2.shouldHave(attribute(Constants.TYPE, Constants.CHECKBOX));
     }
 
-    @Test
+    @Test(description = Constants.DROPDOWNDESC)
     public void dropDownTest() {
         open(Constants.DROPDOWNURL);
         WebDriverRunner.getWebDriver().manage().window().maximize();
@@ -127,7 +112,7 @@ public class SelenideTests {
         dropdown.getSelectedOption().shouldHave(text(Constants.OPT2), value(Constants.TWO));
     }
 
-    @Test
+    @Test(description = Constants.COLLECTIONSDESC)
     public void collectionsTest() {
         open(Constants.COLLECTIONSURL);
         WebDriverRunner.getWebDriver().manage().window().maximize();

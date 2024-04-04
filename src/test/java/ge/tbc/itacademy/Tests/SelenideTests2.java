@@ -1,9 +1,15 @@
+package ge.tbc.itacademy.Tests;
+
 import com.codeborne.selenide.*;
+import ge.tbc.itacademy.ReportListener.CustomReportListener;
+import ge.tbc.itacademy.SuiteListener.CustomSuiteListener;
+import ge.tbc.itacademy.TestListener.CustomTestListener;
 import ge.tbcitacademy.data.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -17,7 +23,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-
+@Listeners({CustomReportListener.class, CustomTestListener.class, CustomSuiteListener.class})
 public class SelenideTests2 {
 
     SoftAssert sfa;
@@ -35,6 +41,10 @@ public class SelenideTests2 {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
+            case Constants.EDGE:
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
             default:
                 throw new IllegalArgumentException(Constants.UNSUPPORTEDBROWSER + browser);
         }
@@ -49,7 +59,7 @@ public class SelenideTests2 {
         driver.close();
     }
 
-    @Test
+    @Test(description = Constants.DEMOSDESC)
     public void validateDemosDesign() {
         open(Constants.TELERIKURL);
         SelenideElement web = $(byAttribute(Constants.HREF, Constants.WEB));
@@ -125,7 +135,7 @@ public class SelenideTests2 {
     }
 
 
-    @Test
+    @Test(description = Constants.ORDERDESC)
     public void validateOrderMechanics() throws InterruptedException {
         open(Constants.TELERIKURL);
         $(withText(Constants.PRICING)).click();
@@ -140,7 +150,6 @@ public class SelenideTests2 {
         $("span.k-input").click();
         $(byText(Constants.TWO)).click();
 
-//        should და shouldBe-ს ვერ ვიყენებ ვერსად და ვერგავიგე რატომ. მაგისგამო მიწერია სლიფი რაღაცით უნდა შემეჩერებინა ცოტახნით
 //        $x("//div[contains(text(), 'Save')]").shouldBe(visible);
         Thread.sleep(1000);
         double totalPriceAfterDiscount = getTotalPrice();
@@ -173,7 +182,7 @@ public class SelenideTests2 {
         sfa.assertAll();
     }
 
-    @Test
+    @Test(description = Constants.CHAINEDDESC)
     public void chainedLocatorsTest() {
         open(Constants.DEMOQAURL);
         ElementsCollection books = $$(".rt-tr-group");
@@ -189,7 +198,7 @@ public class SelenideTests2 {
         }
     }
 
-    @Test
+    @Test(description = Constants.RADIOCHECKBOXDESC)
     public void softAssertTest() {
         open(Constants.DEMOQAURL);
         SelenideElement table = $(".rt-table").find(".rt-tbody");
@@ -214,6 +223,5 @@ public class SelenideTests2 {
         sfa.assertEquals(correctBooks.size(), 10);
         sfa.assertEquals(Constants.TITLETOEQUAL, bookTitles.get(0));
         sfa.assertAll();
-        System.out.println("FIXFIX");
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SelenideTests2Suite" parallel="tests" thread-count="3">
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ge.tbc.itacademy.Tests.SelenideTests2">
+                <methods>
+                    <include name="validateDemosDesign"/>
+                    <include name="validateOrderMechanics"/>
+                    <include name="chainedLocatorsTest"/>
+                    <include name="softAssertTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ge.tbc.itacademy.Tests.SelenideTests2">
+                <methods>
+                    <include name="validateDemosDesign"/>
+                    <include name="validateOrderMechanics"/>
+                    <include name="chainedLocatorsTest"/>
+                    <include name="softAssertTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="EdgeTest">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="ge.tbc.itacademy.Tests.SelenideTests2">
+                <methods>
+                    <include name="validateDemosDesign"/>
+                    <include name="validateOrderMechanics"/>
+                    <include name="chainedLocatorsTest"/>
+                    <include name="softAssertTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
