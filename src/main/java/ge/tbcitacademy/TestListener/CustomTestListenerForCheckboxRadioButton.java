@@ -1,4 +1,4 @@
-package ge.tbc.itacademy.TestListener;
+package ge.tbcitacademy.TestListener;
 
 import ge.tbcitacademy.data.Constants;
 import org.testng.ITestListener;

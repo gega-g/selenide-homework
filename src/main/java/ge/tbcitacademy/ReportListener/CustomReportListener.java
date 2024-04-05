@@ -1,4 +1,4 @@
-package ge.tbc.itacademy.ReportListener;
+package ge.tbcitacademy.ReportListener;
 
 import ge.tbcitacademy.data.Constants;
 import org.testng.*;

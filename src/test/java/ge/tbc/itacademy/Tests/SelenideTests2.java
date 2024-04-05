@@ -1,9 +1,9 @@
 package ge.tbc.itacademy.Tests;
 
 import com.codeborne.selenide.*;
-import ge.tbc.itacademy.ReportListener.CustomReportListener;
-import ge.tbc.itacademy.SuiteListener.CustomSuiteListener;
-import ge.tbc.itacademy.TestListener.CustomTestListener;
+import ge.tbcitacademy.ReportListener.CustomReportListener;
+import ge.tbcitacademy.SuiteListener.CustomSuiteListener;
+import ge.tbcitacademy.TestListener.CustomTestListener;
 import ge.tbcitacademy.data.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

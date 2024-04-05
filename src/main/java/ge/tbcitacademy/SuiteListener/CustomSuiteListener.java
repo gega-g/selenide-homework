@@ -1,4 +1,4 @@
-package ge.tbc.itacademy.SuiteListener;
+package ge.tbcitacademy.SuiteListener;
 
 import ge.tbcitacademy.data.Constants;
 import org.testng.ISuite;
