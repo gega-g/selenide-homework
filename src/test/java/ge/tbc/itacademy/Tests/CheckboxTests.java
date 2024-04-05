@@ -39,5 +39,6 @@ public class CheckboxTests extends ConfigTests {
 
         checker(checkbox1);
         Assert.assertFalse(checkbox1.isSelected());
+        System.out.println("smth");
     }
 }
