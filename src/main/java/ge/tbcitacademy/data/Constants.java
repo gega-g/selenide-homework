@@ -61,6 +61,7 @@ public class Constants {
     public static final String EDGE = "edge";
     public static final String MESSI = "Messi";
     public static final String GOAT = "Goat";
+    public static final String LINE2 = "line2";
     public static final String FAIL5TIMES = "This test will fail 5 times";
     public static final String DEMOSDESC = "Checking elements attributes";
     public static final String ORDERDESC = "Validating correct order sums";

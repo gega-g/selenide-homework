@@ -36,5 +36,6 @@ public class RadioButtonTests extends ConfigTests{
     @Test(description = Constants.FAIL5TIMES , priority = 2, retryAnalyzer = RetryAnalyzer.class)
     public void falseInfo(){
         Assert.assertEquals(Constants.MESSI, Constants.GOAT);
+        System.out.println("line1");
     }
 }
