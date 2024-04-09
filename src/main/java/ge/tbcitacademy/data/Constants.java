@@ -59,7 +59,6 @@ public class Constants {
     public static final String TESTTIME = "TOTAL TIME USED FOR TEST SUITE EXECUTION: %d MILLISECONDS\n";
     public static final String TESTMETHODTIME = "TOTAL TIME USED FOR TEST METHOD EXECUTION: %d MILLISECONDS\n";
     public static final String EDGE = "edge";
-    public static final String o = "...";
     public static final String BURGER = "ბურგერ";
     public static final String TITLE = "title";
     public static final String FIRSTNAME = "firstName";
