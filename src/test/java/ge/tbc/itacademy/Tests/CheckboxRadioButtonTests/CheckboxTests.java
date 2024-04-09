@@ -1,6 +1,7 @@
-package ge.tbc.itacademy.Tests;
+package ge.tbc.itacademy.Tests.CheckboxRadioButtonTests;
 
 import com.codeborne.selenide.*;
+import ge.tbc.itacademy.Tests.Configuration.ConfigTests;
 import ge.tbcitacademy.ReportListener.CustomReportListenerForCheckboxRadioButton;
 import ge.tbcitacademy.TestListener.CustomTestListenerForCheckboxRadioButton;
 import ge.tbcitacademy.data.Constants;
@@ -39,6 +40,5 @@ public class CheckboxTests extends ConfigTests {
 
         checker(checkbox1);
         Assert.assertFalse(checkbox1.isSelected());
-        System.out.println("line3");
     }
 }

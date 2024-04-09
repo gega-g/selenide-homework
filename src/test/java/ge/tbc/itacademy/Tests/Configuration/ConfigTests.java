@@ -1,4 +1,4 @@
-package ge.tbc.itacademy.Tests;
+package ge.tbc.itacademy.Tests.Configuration;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
@@ -40,8 +40,10 @@ public class ConfigTests {
         open();
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
-    @AfterClass
+    @AfterTest
     public void tearDown() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

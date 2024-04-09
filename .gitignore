@@ -1,3 +1,7 @@
 /.idea
 target/
 *.iml
+/build
+/CheckboxFailedTests
+/allure-results
+/RadioButtonFailedTests

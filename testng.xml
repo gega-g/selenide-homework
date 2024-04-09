@@ -2,38 +2,11 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
-<suite name="TestNG Suite" parallel="tests" thread-count="2">
-<!--    <test name="SelenideTestMethods">-->
-<!--        <groups>-->
-<!--            <define name="SelenideTests">-->
-<!--                <include name="Selenide1"/>-->
-<!--                <include name="Selenide2"/>-->
-<!--            </define>-->
-<!--        </groups>-->
-<!--    </test>-->
-    
-    <test name="Checkbox and RadioButtons">
-        <groups>
-            <define name="CheckBoxes-FrontEnd">
-                <include name="checkBoxTests"/>
-            </define>
-            <define name="RadioButtons-FrontEnd">
-                <include name="radioButtonTests"/>
-            </define>
-            <run>
-                <include name=".*FrontEnd"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="ge.tbc.itacademy.Tests.CheckboxTests"/>
-            <class name="ge.tbc.itacademy.Tests.RadioButtonTests"/>
-        </classes>
-    </test>
+<suite name="TestNG Suite">
     <suite-files>
-<!--        <suite-file path="src/main/java/ge/tbcitacademy/HomeworkSuites/SelenideTestsSuite.xml" />-->
-<!--        <suite-file path="src/main/java/ge/tbcitacademy/HomeworkSuites/SelenideTests2Suite.xml" />-->
-        <suite-file path="src/main/java/ge/tbcitacademy/HomeworkSuites/RadioButtonTestsSuite.xml" />
-        <suite-file path="src/main/java/ge/tbcitacademy/HomeworkSuites/CheckboxTestsSuite.xml" />
+        <suite-file path="HomeworkSuites/ParametrizedSwoopTestsSuite.xml" />
+<!--        <suite-file path="HomeworkSuites/ParametrizedSwoopTests2Suite.xml" />-->
+<!--        <suite-file path="HomeworkSuites/AlternativeParameterization.xml" />-->
+<!--        <suite-file path="HomeworkSuites/DependsOnTest.xml" />-->
     </suite-files>
 </suite>

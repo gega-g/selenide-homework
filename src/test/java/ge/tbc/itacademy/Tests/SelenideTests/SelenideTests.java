@@ -1,4 +1,4 @@
-package ge.tbc.itacademy.Tests;
+package ge.tbc.itacademy.Tests.SelenideTests;
 
 import com.codeborne.selenide.*;
 import ge.tbcitacademy.ReportListener.CustomReportListener;

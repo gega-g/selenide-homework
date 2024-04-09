@@ -59,9 +59,16 @@ public class Constants {
     public static final String TESTTIME = "TOTAL TIME USED FOR TEST SUITE EXECUTION: %d MILLISECONDS\n";
     public static final String TESTMETHODTIME = "TOTAL TIME USED FOR TEST METHOD EXECUTION: %d MILLISECONDS\n";
     public static final String EDGE = "edge";
+    public static final String BURGER = "ბურგერ";
+    public static final String TITLE = "title";
+    public static final String FIRSTNAME = "firstName";
+    public static final String LASTNAME = "lastName";
+    public static final String USERNUMBER = "userNumber";
     public static final String MESSI = "Messi";
     public static final String GOAT = "Goat";
-    public static final String LINE2 = "line2";
+    public static final String DEMOQAURLAUTO = "https://demoqa.com/automation-practice-form";
+    public static final String INNERTEXT = "innerText";
+    public static final String SWOOPURL = "https://swoop.ge";
     public static final String FAIL5TIMES = "This test will fail 5 times";
     public static final String DEMOSDESC = "Checking elements attributes";
     public static final String ORDERDESC = "Validating correct order sums";

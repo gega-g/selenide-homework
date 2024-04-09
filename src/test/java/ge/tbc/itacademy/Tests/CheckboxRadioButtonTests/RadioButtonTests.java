@@ -1,6 +1,7 @@
-package ge.tbc.itacademy.Tests;
+package ge.tbc.itacademy.Tests.CheckboxRadioButtonTests;
 
 import com.codeborne.selenide.*;
+import ge.tbc.itacademy.Tests.Configuration.ConfigTests;
 import ge.tbcitacademy.ReportListener.CustomReportListenerForCheckboxRadioButton;
 import ge.tbcitacademy.Retry.IRetry;
 import ge.tbcitacademy.Retry.RetryAnalyzer;
@@ -10,13 +11,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import static com.codeborne.selenide.Condition.clickable;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.*;
 
 @Listeners({CustomReportListenerForCheckboxRadioButton.class,
         CustomTestListenerForCheckboxRadioButton.class})
-public class RadioButtonTests extends ConfigTests{
+public class RadioButtonTests extends ConfigTests {
 
     public void checkYes(SelenideElement yes){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -36,6 +36,5 @@ public class RadioButtonTests extends ConfigTests{
     @Test(description = Constants.FAIL5TIMES , priority = 2, retryAnalyzer = RetryAnalyzer.class)
     public void falseInfo(){
         Assert.assertEquals(Constants.MESSI, Constants.GOAT);
-        System.out.println("line1");
     }
 }
