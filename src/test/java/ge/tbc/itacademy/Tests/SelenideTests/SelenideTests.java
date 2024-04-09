@@ -109,6 +109,7 @@ public class SelenideTests {
         option.shouldBe(selected);
         dropdown.selectOption(Constants.OPT2);
         dropdown.getSelectedOption().shouldHave(text(Constants.OPT2), value(Constants.TWO));
+        System.out.println("conf");
     }
 
     @Test(description = Constants.COLLECTIONSDESC)
