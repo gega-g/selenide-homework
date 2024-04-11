@@ -22,7 +22,6 @@ public class AlternativeParameterization extends ConfigTests {
 
         String enteredFirstName = $(By.id(Constants.FIRSTNAME)).getValue();
         assertEquals(enteredFirstName, firstName);
-        System.out.println("conf");
     }
 
     @DataProvider()
